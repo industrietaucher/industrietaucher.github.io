@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Under Pressure Group | Michael Küng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0e0d0b;
+    --deep: #161410;
+    --warm: #1e1b14;
+    --amber: #c8820a;
+    --gold: #f2bc50;
+    --white: #ede8de;
+    --muted: #8a8070;
+    --border: rgba(200,130,10,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .topbar {
+    background: var(--warm);
+    border-bottom: 1px solid var(--border);
+    padding: 0.8rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .topbar-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-decoration: none;
+  }
+
+  .topbar-links { display: flex; gap: 2rem; }
+  .topbar-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .topbar-links a:hover { color: var(--gold); }
+
+  .hero {
+    background: var(--deep);
+    border-bottom: 2px solid var(--amber);
+    padding: 5rem 4rem 4rem;
+  }
+
+  .hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+
+  .hero h1 span { color: var(--gold); }
+
+  .lang-switch {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .lang-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .lang-btn.active, .lang-btn:hover { border-color: var(--amber); color: var(--gold); }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .block { margin-bottom: 2.5rem; }
+
+  .block-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+
+  .block p, .block a {
+    color: #c8c0b0;
+    text-decoration: none;
+    display: block;
+    line-height: 1.9;
+  }
+
+  .block a:hover { color: var(--gold); }
+
+  .block strong { color: var(--white); font-weight: 500; }
+
+  .full-width {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    padding-top: 3rem;
+  }
+
+  .disclaimer {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    padding: 1.2rem 1.5rem;
+    font-size: 0.85rem;
+    color: #c8c0b0;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  footer a { color: var(--amber); text-decoration: none; }
+
+  /* Language */
+  [lang="en"] { display: none; }
+  body.en [lang="de"] { display: none; }
+  body.en [lang="en"] { display: block; }
+  body.en span[lang="en"] { display: inline; }
+  body.en span[lang="de"] { display: none; }
+  span[lang="de"] { display: inline; }
+
+  @media (max-width: 768px) {
+    .topbar { padding: 0.8rem 1.5rem; }
+    .topbar-links { display: none; }
+    .hero { padding: 4rem 1.5rem 3rem; }
+    .container { padding: 3rem 1.5rem; grid-template-columns: 1fr; gap: 0; }
+    footer { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="topbar-logo" href="#">Under Pressure Group</a>
+  <div class="topbar-links">
+    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
+    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
+    <a href="agb.html">AGB</a>
+  </div>
+</div>
+
+<div class="hero">
+  <p class="hero-label">
+    <span lang="de">Rechtliche Angaben</span>
+    <span lang="en">Legal Notice</span>
+  </p>
+  <h1>
+    <span lang="de">Impressum <span>Under Pressure Group</span></span>
+    <span lang="en">Imprint <span>Under Pressure Group</span></span>
+  </h1>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
+    <button class="lang-btn" onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- BETREIBER -->
+  <div>
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Betreiber & Verantwortlicher</span>
+        <span lang="en">Operator & Responsible Party</span>
+      </p>
+      <p>
+        <strong>Under Pressure Group</strong><br>
+        <span lang="de">Inhaber:</span><span lang="en">Owner:</span> Michael Küng<br>
+        Erlenweg 10<br>
+        6010 Kriens<br>
+        Schweiz / Switzerland
+      </p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Kontakt</span>
+        <span lang="en">Contact</span>
+      </p>
+      <p>
+        <span lang="de">Telefon / WhatsApp:</span>
+        <span lang="en">Phone / WhatsApp:</span>
+      </p>
+      <a href="tel:+41779217136">+41 77 921 71 36</a>
+      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Unternehmensform</span>
+        <span lang="en">Business Structure</span>
+      </p>
+      <p>
+        <span lang="de">Einzelunternehmen</span>
+        <span lang="en">Sole proprietorship</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- WEBSITES -->
+  <div>
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Betriebene Websites</span>
+        <span lang="en">Operated Websites</span>
+      </p>
+      <p>
+        <a href="https://notfalltaucher.ch" target="_blank">notfalltaucher.ch</a>
+        <span lang="de" style="color:var(--muted);font-size:0.82rem;">Notfalleinsätze & Unterwasser-Problemlösung</span>
+        <span lang="en" style="color:var(--muted);font-size:0.82rem;">Emergency operations & underwater problem solving</span>
+      </p>
+      <p style="margin-top:1rem;">
+        <a href="https://industrietaucher.ch" target="_blank">industrietaucher.ch</a>
+        <span lang="de" style="color:var(--muted);font-size:0.82rem;">Industrielle Unterwasser-Dienstleistungen</span>
+        <span lang="en" style="color:var(--muted);font-size:0.82rem;">Industrial underwater services</span>
+      </p>
+      <p style="margin-top:1rem;">
+        <a href="https://underpressure.ch" target="_blank">underpressure.ch</a>
+        <span lang="de" style="color:var(--muted);font-size:0.82rem;">Unternehmenswebsite Under Pressure Group</span>
+        <span lang="en" style="color:var(--muted);font-size:0.82rem;">Company website Under Pressure Group</span>
+      </p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Domain-Registrar</span>
+        <span lang="en">Domain Registrar</span>
+      </p>
+      <p>
+        Hosttech GmbH<br>
+        Seestrasse 15a<br>
+        8805 Richterswil<br>
+        <a href="https://hosttech.ch" target="_blank">hosttech.ch</a>
+      </p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Hosting</span>
+        <span lang="en">Hosting</span>
+      </p>
+      <p>
+        GitHub Pages<br>
+        GitHub, Inc.<br>
+        88 Colin P Kelly Jr St<br>
+        San Francisco, CA 94107, USA<br>
+        <a href="https://pages.github.com" target="_blank">pages.github.com</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- FULL WIDTH SECTIONS -->
+  <div class="full-width">
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Haftungsausschluss Inhalte</span>
+        <span lang="en">Content Disclaimer</span>
+      </p>
+      <div class="disclaimer">
+        <span lang="de">Die Inhalte dieser Websites wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Under Pressure Group behält sich das Recht vor, die Inhalte jederzeit ohne Ankündigung zu ändern.</span>
+        <span lang="en">The content of these websites has been created with the greatest care. However, no guarantee is given for the accuracy, completeness and timeliness of the content. Under Pressure Group reserves the right to change the content at any time without notice.</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Haftungsausschluss Links</span>
+        <span lang="en">Links Disclaimer</span>
+      </p>
+      <div class="disclaimer">
+        <span lang="de">Diese Websites enthalten Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</span>
+        <span lang="en">These websites contain links to external third-party websites over whose content we have no influence. The respective provider is always responsible for the content of linked pages.</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Urheberrecht</span>
+        <span lang="en">Copyright</span>
+      </p>
+      <div class="disclaimer">
+        <span lang="de">Die durch den Betreiber erstellten Inhalte und Werke auf diesen Websites unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung von Under Pressure Group. Bildmaterial von Pexels.com unterliegt der jeweiligen Pexels-Lizenz.</span>
+        <span lang="en">The content and works created by the operator on these websites are subject to Swiss copyright law. Duplication, processing, distribution and any kind of use beyond the limits of copyright requires the written consent of Under Pressure Group. Image material from Pexels.com is subject to the respective Pexels license.</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Datenschutz</span>
+        <span lang="en">Privacy</span>
+      </p>
+      <div class="disclaimer">
+        <span lang="de">Diese Websites erheben keine persönlichen Daten durch Formulare oder Tracking-Tools. Beim Kontakt per E-Mail oder Telefon werden die übermittelten Daten ausschliesslich zur Bearbeitung der Anfrage verwendet und nicht an Dritte weitergegeben. Es gilt das Schweizer Datenschutzgesetz (DSG).</span>
+        <span lang="en">These websites do not collect personal data through forms or tracking tools. When contacting by email or phone, the transmitted data is used exclusively to process the enquiry and is not passed on to third parties. The Swiss Data Protection Act (DSG) applies.</span>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">
+        <span lang="de">Anwendbares Recht</span>
+        <span lang="en">Applicable Law</span>
+      </p>
+      <p>
+        <span lang="de">Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Kriens, Kanton Luzern.</span>
+        <span lang="en">Swiss law applies exclusively. Place of jurisdiction is Kriens, Canton of Lucerne.</span>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Under Pressure Group · Michael Küng · Erlenweg 10, 6010 Kriens</p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
+    &nbsp;·&nbsp;
+    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
+    &nbsp;·&nbsp;
+    <a href="agb.html">AGB</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+  </p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('en', lang === 'en');
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.includes(lang === 'de' ? 'Deutsch' : 'English'));
+  });
+}
+</script>
+
+</body>
+</html>
