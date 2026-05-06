@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preisliste – Under Pressure Group | Michael Küng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:  #0e0d0b;
+    --deep:   #161410;
+    --warm:   #1e1b14;
+    --panel:  #181510;
+    --amber:  #c8820a;
+    --gold:   #f2bc50;
+    --gold2:  #e8a830;
+    --white:  #ede8de;
+    --muted:  #8a8070;
+    --soft:   #c8c0b0;
+    --border: rgba(200,130,10,0.18);
+    --border2:rgba(200,130,10,0.08);
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--warm);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topbar-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .topbar-meta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    gap: 2rem;
+  }
+  .topbar-meta a { color: var(--muted); text-decoration: none; }
+  .topbar-meta a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--deep);
+    border-bottom: 2px solid var(--amber);
+    padding: 4.5rem 4rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(200,130,10,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.9rem;
+  }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 0.95;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-size: 0.88rem;
+    color: var(--soft);
+    max-width: 540px;
+    line-height: 1.7;
+    border-left: 2px solid var(--amber);
+    padding-left: 1.2rem;
+  }
+  .hero-contact {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .hero-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .hero-contact-item span:first-child {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .hero-contact-item a,
+  .hero-contact-item span:last-child {
+    color: var(--soft);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+  .hero-contact-item a:hover { color: var(--gold); }
+  .hero-date {
+    position: absolute;
+    right: 4rem; bottom: 2.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 4rem 5rem;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    min-width: 40px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--white);
+  }
+  .section-note {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── TABLE ── */
+  .price-section {
+    margin-bottom: 3.5rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead tr {
+    background: var(--warm);
+    border-bottom: 1px solid var(--border);
+  }
+  thead th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    padding: 0.65rem 1rem;
+    text-align: left;
+  }
+  thead th:last-child { text-align: right; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border2);
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: rgba(200,130,10,0.03); }
+
+  tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: top;
+  }
+  .td-leistung {
+    color: var(--white);
+    font-weight: 400;
+  }
+  .td-leistung small {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 300;
+    margin-top: 0.1rem;
+  }
+  .td-tarif {
+    text-align: right;
+    white-space: nowrap;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+  .td-tarif.on-request {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .td-einheit {
+    color: var(--soft);
+    font-size: 0.82rem;
+    padding-left: 0.5rem;
+  }
+  .td-badge {
+    vertical-align: middle;
+    padding-left: 1rem;
+  }
+
+  /* ── ZUSCHLAG CARDS ── */
+  .zuschlag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 1.2rem;
+  }
+  .zuschlag-card {
+    background: var(--panel);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: background 0.2s;
+  }
+  .zuschlag-card:hover { background: var(--warm); }
+  .zuschlag-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .zuschlag-pct {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .zuschlag-pct.anfrage {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--muted);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: italic;
+    line-height: 2;
+  }
+  .zuschlag-def {
+    font-size: 0.78rem;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    padding: 1.2rem 1.5rem;
+    font-size: 0.83rem;
+    color: var(--soft);
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+  .example-box strong { color: var(--white); font-weight: 500; }
+  .example-box .ex-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--amber);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── RICHTPREISE TABLE special ── */
+  .richtpreis-range {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .richtpreis-range.anfrage {
+    font-size: 0.82rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* ── STORNO TABLE ── */
+  .storno-ok td { }
+  .storno-warn .td-tarif { color: var(--gold2); }
+  .storno-err  .td-tarif { color: #e07050; }
+
+  /* ── CLOSING STATEMENT ── */
+  .closing {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .closing-card {
+    background: var(--warm);
+    border: 1px solid var(--border);
+    padding: 1.8rem 2rem;
+  }
+  .closing-card-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+  .closing-card p {
+    font-size: 0.83rem;
+    color: var(--soft);
+    line-height: 1.7;
+  }
+  .closing-card p strong { color: var(--white); font-weight: 500; }
+
+  .note-strip {
+    margin-top: 1.5rem;
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--border);
+    padding-top: 1.2rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  footer a { color: var(--amber); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  /* ── PRINT ── */
+  @media print {
+    .topbar, footer { display: none; }
+    body { background: white; color: #111; font-size: 8.5pt; }
+    :root {
+      --black: #fff; --deep: #f5f5f5; --warm: #f0ede8;
+      --amber: #b87000; --gold: #9a5e00; --white: #111;
+      --muted: #666; --soft: #444; --border: rgba(0,0,0,0.12);
+      --border2: rgba(0,0,0,0.06); --panel: #f8f6f2;
+    }
+    .zuschlag-pct { font-size: 1.4rem; }
+    .hero { padding: 2rem 2rem 1.5rem; }
+    .page { padding: 2rem; }
+    .hero::before { display: none; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .topbar { padding: 0.75rem 1.5rem; }
+    .topbar-meta { display: none; }
+    .hero { padding: 3.5rem 1.5rem 2.5rem; }
+    .hero-date { display: none; }
+    .page { padding: 2.5rem 1.5rem; }
+    .zuschlag-grid { grid-template-columns: 1fr 1fr; }
+    .closing { grid-template-columns: 1fr; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <a class="topbar-logo" href="https://industrietaucher.ch">Under Pressure Group</a>
+  <div class="topbar-meta">
+    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
+    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
+    <span>+41 77 921 71 36</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-label">Unterwasser-Dienstleistungen · Schweiz</p>
+  <h1>Preis<span>liste</span><br>2026</h1>
+  <p class="hero-sub">
+    Professionelle Unterwasserarbeiten durch zertifizierte Industrietaucher und Sprengmeister.
+    Einsatz im Notfall, für Industrie und öffentliche Hand – innert kürzester Zeit in der Zentralschweiz.
+  </p>
+  <div class="hero-contact">
+    <div class="hero-contact-item">
+      <span>Betreiber</span>
+      <span>Michael Küng, Under Pressure Group</span>
+    </div>
+    <div class="hero-contact-item">
+      <span>Adresse</span>
+      <span>Erlenweg 10, 6010 Kriens</span>
+    </div>
+    <div class="hero-contact-item">
+      <span>Telefon / WhatsApp</span>
+      <a href="tel:+41779217136">+41 77 921 71 36</a>
+    </div>
+    <div class="hero-contact-item">
+      <span>E-Mail</span>
+      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+    </div>
+  </div>
+  <span class="hero-date">Stand: Mai 2026 · Alle Preise CHF exkl. MwSt.</span>
+</div>
+
+<!-- MAIN -->
+<div class="page">
+
+  <!-- 01 GRUNDTARIFE -->
+  <div class="price-section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Grundtarife</span>
+      <span class="section-note">Basis aller Einsätze</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:40%">Leistung</th>
+          <th style="width:30%">Einheit / Bemerkung</th>
+          <th style="width:30%">Tarif CHF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-leistung">
+            Einsatzpauschale
+            <small>Gilt pro Einsatz, unabhängig von der Dauer</small>
+          </td>
+          <td class="td-einheit">Grundgebühr pro Einsatz</td>
+          <td class="td-tarif">250.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Tauchzeit
+            <small>Abrechnung in 30-Minuten-Einheiten</small>
+          </td>
+          <td class="td-einheit">pro Stunde</td>
+          <td class="td-tarif">180.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Mindestrechnung
+            <small>Exkl. Anfahrtskosten</small>
+          </td>
+          <td class="td-einheit">pro Einsatz</td>
+          <td class="td-tarif">350.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Anfahrt
+            <small>Ab Kriens, Hin- und Rückfahrt</small>
+          </td>
+          <td class="td-einheit">pro km</td>
+          <td class="td-tarif">1.50</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Wartezeit Oberfläche
+            <small>Wenn Wartezeiten auf Weisung des Auftraggebers anfallen</small>
+          </td>
+          <td class="td-einheit">pro Stunde</td>
+          <td class="td-tarif">80.–</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 02 ZUSCHLÄGE -->
+  <div class="price-section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Zuschläge</span>
+      <span class="section-note">Kumulierbar · additiv auf Grundtarif</span>
+    </div>
+
+    <div class="zuschlag-grid">
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Kurzfristiger Einsatz</span>
+        <span class="zuschlag-pct">+50 %</span>
+        <span class="zuschlag-def">Anfrage weniger als 24 Stunden vorher</span>
+      </div>
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Notfalleinsatz</span>
+        <span class="zuschlag-pct">+100 %</span>
+        <span class="zuschlag-def">Soforteinsatz ohne Voranmeldung</span>
+      </div>
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Nachteinsatz</span>
+        <span class="zuschlag-pct">+75 %</span>
+        <span class="zuschlag-def">22:00 – 06:00 Uhr</span>
+      </div>
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Wochenende / Feiertag</span>
+        <span class="zuschlag-pct">+50 %</span>
+        <span class="zuschlag-def">Samstag, Sonntag und gesetzliche Feiertage</span>
+      </div>
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Seilzugang / Abseilen</span>
+        <span class="zuschlag-pct">+30 %</span>
+        <span class="zuschlag-def">Kombinierter Taucher- und Seileinsatz</span>
+      </div>
+      <div class="zuschlag-card">
+        <span class="zuschlag-name">Tiefe &gt; 40 m</span>
+        <span class="zuschlag-pct anfrage">Auf Anfrage</span>
+        <span class="zuschlag-def">Nur nach schriftlicher Vereinbarung</span>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <span class="ex-label">Rechenbeispiel</span>
+      Notfalleinsatz <strong>(+100%)</strong> in der Nacht <strong>(+75%)</strong> an einem Sonntag <strong>(+50%)</strong>
+      → Gesamtzuschlag auf den Grundtarif: <strong>+225%</strong>.<br>
+      Zuschläge sind additiv und werden auf den jeweiligen Leistungstarif angewendet.
+    </div>
+  </div>
+
+  <!-- 03 RICHTPREISE -->
+  <div class="price-section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Richtpreise nach Einsatztyp</span>
+      <span class="section-note">Ohne Gewähr · verbindlich per Offerte</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:38%">Einsatztyp</th>
+          <th style="width:30%">Hinweis</th>
+          <th style="width:32%">Richtpreis CHF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-leistung">
+            Schlüssel / Schmuck / Kleinobjekt
+            <small>Vermisste Wertgegenstände, Bergung einfacher Objekte</small>
+          </td>
+          <td class="td-einheit">Bis 15 m, gute Sicht</td>
+          <td class="richtpreis-range">350.– – 600.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Inspektion Leitung / Fundament
+            <small>Inkl. Foto- und Videodokumentation</small>
+          </td>
+          <td class="td-einheit">Je nach Tiefe und Umfang</td>
+          <td class="richtpreis-range">600.– – 1'200.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Kabel- / Rohrdokumentation
+            <small>Systematische Erfassung von Leitungsverläufen</small>
+          </td>
+          <td class="td-einheit">Je nach Tiefe und Länge</td>
+          <td class="richtpreis-range">800.– – 2'000.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Fahrzeug- / Grossobjektbergung
+            <small>Koordination mit Auftraggeber und Behörden</small>
+          </td>
+          <td class="td-einheit">Ab, je nach Aufwand</td>
+          <td class="richtpreis-range">ab 1'500.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Suchauftrag / Rastersuche
+            <small>Systematische Absuche eines definierten Bereichs</small>
+          </td>
+          <td class="td-einheit">Pro Einsatztag</td>
+          <td class="richtpreis-range">ab 1'200.–</td>
+        </tr>
+        <tr>
+          <td class="td-leistung">
+            Sprengmittel-Einsatz
+            <small>Eingesetzter Sprengmeister mit entsprechender Zertifizierung</small>
+          </td>
+          <td class="td-einheit">Schriftliche Offerte erforderlich</td>
+          <td class="richtpreis-range anfrage">Auf Anfrage</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 04 STORNIERUNG -->
+  <div class="price-section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Stornierungsbedingungen</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:50%">Zeitpunkt der Stornierung</th>
+          <th style="width:50%">Kosten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="storno-ok">
+          <td class="td-leistung">Mehr als 48 Stunden vorher</td>
+          <td class="td-tarif" style="color:var(--muted);font-size:0.9rem;">Kostenlos</td>
+        </tr>
+        <tr class="storno-warn">
+          <td class="td-leistung">24 – 48 Stunden vorher</td>
+          <td class="td-tarif">50 % der Einsatzpauschale</td>
+        </tr>
+        <tr class="storno-err">
+          <td class="td-leistung">Weniger als 24 Stunden vorher</td>
+          <td class="td-tarif" style="color:#e07050;">100 % der Einsatzpauschale</td>
+        </tr>
+        <tr class="storno-err">
+          <td class="td-leistung">Abbruch während laufendem Einsatz</td>
+          <td class="td-tarif" style="color:#e07050;">100 % der erbrachten Leistung</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="closing-card">
+      <p class="closing-card-label">Offertanfrage & Verbindliche Kosten</p>
+      <p>
+        Alle aufgeführten Richtpreise sind Richtwerte ohne Gewähr.
+        <strong>Verbindliche Kosten werden ausschliesslich per schriftlicher Offerte vor Einsatzbeginn festgelegt.</strong>
+        Offertanfragen werden innert 24 Stunden beantwortet.
+      </p>
+    </div>
+    <div class="closing-card">
+      <p class="closing-card-label">Qualifikation & Ausstattung</p>
+      <p>
+        Michael Küng ist ausgebildeter <strong>Industrietaucher und Sprengmeister</strong>.
+        Einsätze erfolgen mit professionellem Equipment, Eigen- und Fremdsicherung sowie vollständiger Dokumentation auf Anfrage.
+      </p>
+    </div>
+    <p class="note-strip">
+      Alle Preise in CHF · exkl. MwSt. (sofern anwendbar) · Under Pressure Group · Michael Küng · Erlenweg 10, 6010 Kriens ·
+      <a href="mailto:info@industrietaucher.ch" style="color:var(--amber);">info@industrietaucher.ch</a> ·
+      <a href="tel:+41779217136" style="color:var(--amber);">+41 77 921 71 36</a>
+    </p>
+  </div>
+
+</div><!-- /page -->
+
+<footer>
+  <span>© 2026 Under Pressure Group · Michael Küng · Erlenweg 10, 6010 Kriens</span>
+  <span>
+    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
+    &nbsp;·&nbsp;
+    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+  </span>
+</footer>
+
+</body>
+</html>
