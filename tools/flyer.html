@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<title>Industrietaucher.ch Firmenflyer</title>
+<!-- PDF erzeugen: tools/build_flyer.ps1 (druckt diese Seite mit Edge als PDF) -->
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #0e1a26; font-size: 9.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; background: #fff; }
+  .page:last-child { page-break-after: auto; }
+  .hero { height: 112mm; position: relative; color: #fff; background: #0c1822; }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,14,21,.93) 0%, rgba(7,14,21,.7) 50%, rgba(7,14,21,.15) 100%); z-index: 1; }
+  .hero-in { position: absolute; left: 16mm; right: 16mm; bottom: 14mm; z-index: 2; }
+  .brand { position: absolute; top: 12mm; left: 16mm; z-index: 2; display: flex; align-items: center; gap: 3mm; font-weight: 700; font-size: 12pt; }
+  .brand small { display: block; font-weight: 400; font-size: 7.5pt; color: #b3bfcb; }
+  .brand svg { width: 10mm; height: 7mm; }
+  .kicker { font-size: 7.5pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #1b4b8f; margin-bottom: 2mm; }
+  .hero .kicker { color: #9cc0ee; }
+  h1 { font-size: 25pt; line-height: 1.08; letter-spacing: -.02em; max-width: 125mm; margin-bottom: 4mm; }
+  .hero p { font-size: 10.5pt; color: #d3dde6; max-width: 120mm; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 0.3mm solid #d8d5cd; margin: 0 16mm; }
+  .facts div { padding: 4.5mm 0 4.5mm 4mm; }
+  .facts div:first-child { padding-left: 0; }
+  .facts div + div { border-left: 0.3mm solid #d8d5cd; }
+  .facts b { display: block; font-size: 15pt; color: #1b4b8f; }
+  .facts span { font-size: 7.8pt; color: #66707b; }
+  .body { padding: 8mm 16mm 0; }
+  h2 { font-size: 14pt; letter-spacing: -.01em; margin-bottom: 4mm; }
+  .svc { display: grid; grid-template-columns: 1fr 1fr; gap: 3.2mm 6mm; }
+  .svc div { border-top: 0.6mm solid #1b4b8f; padding-top: 2.2mm; }
+  .svc b { display: block; font-size: 10pt; margin-bottom: 0.8mm; }
+  .svc p { color: #33414f; font-size: 8.6pt; }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; background: #0c1822; color: #e8edf2; padding: 7mm 16mm; display: flex; justify-content: space-between; align-items: center; font-size: 9pt; }
+  .foot b { font-size: 11pt; }
+  .foot .r { text-align: right; }
+  .red { color: #ff8a9b; font-weight: 700; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+  .rows { list-style: none; border-top: 0.3mm solid #d8d5cd; }
+  .rows li { padding: 2mm 0; border-bottom: 0.3mm solid #d8d5cd; }
+  .rows b { display: block; font-size: 9pt; }
+  .rows span { color: #33414f; font-size: 8.4pt; }
+  .checks { list-style: none; }
+  .checks li { padding: 1.4mm 0 1.4mm 6mm; position: relative; color: #33414f; font-size: 8.8pt; }
+  .checks li::before { content: ""; position: absolute; left: 0; top: 2.5mm; width: 3.2mm; height: 3.2mm; background: #1b4b8f; }
+  .checks b { color: #0e1a26; }
+  .band { background: #e6ecf4; border-left: 1mm solid #1b4b8f; padding: 5mm 6mm; margin-top: 7mm; }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 0.8mm solid #1b4b8f; margin-top: 2mm; }
+  .steps div { padding: 2.5mm 3mm 0 0; font-size: 8pt; color: #33414f; }
+  .steps b { display: block; color: #0e1a26; font-size: 8.8pt; }
+  .steps i { display: block; font-style: normal; color: #1b4b8f; font-weight: 700; font-size: 7.5pt; }
+  .clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.3mm; background: #d8d5cd; border: 0.3mm solid #d8d5cd; }
+  .clients div { background: #fff; padding: 3mm 3.5mm; font-weight: 700; font-size: 9pt; min-height: 13mm; display: flex; align-items: center; }
+  .imgrow { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2mm; margin-top: 5mm; }
+  .imgrow img { width: 100%; height: 24mm; object-fit: cover; display: block; }
+  .warn { font-size: 7.8pt; color: #66707b; margin-top: 4mm; }
+</style>
+</head>
+<body>
+
+<!-- SEITE 1 -->
+<section class="page">
+  <div class="hero">
+    <img src="../img/taucher-gesichert-oberflaeche.jpg" alt="">
+    <div class="brand">
+      <svg viewBox="0 0 30 20"><rect x="0.5" y="0.5" width="15" height="19" fill="#fff" stroke="#fff"/><path d="M15 0H30L23 10L30 20H15Z" fill="#4f86d0"/></svg>
+      <span>Industrietaucher.ch<small>Under Pressure Group</small></span>
+    </div>
+    <div class="hero-in">
+      <div class="kicker">Industrietaucher und Engineering · Schweiz</div>
+      <h1>Unterwasserarbeiten, Inspektion und Engineering für Behörden und Werke.</h1>
+      <p>Wir tauchen, messen, dokumentieren und lösen technische Probleme unter Wasser. Von der ersten Abklärung bis zum fertigen Bericht aus einer Hand.</p>
+    </div>
+  </div>
+  <div class="facts">
+    <div><b>140+</b><span>Tauchgänge im Jahr 2025</span></div>
+    <div><b>65 m</b><span>dokumentierter Tiefeneinsatz</span></div>
+    <div><b>24/7</b><span>alarmierbar für Notfälle</span></div>
+    <div><b>24 h</b><span>bis zur schriftlichen Offerte</span></div>
+  </div>
+  <div class="body">
+    <div class="kicker">Leistungen</div>
+    <h2>Acht Arbeitsbereiche, ein Ansprechpartner</h2>
+    <div class="svc">
+      <div><b>Inspektion und Zustandsaufnahme</b><p>Brückenpfeiler, Ufermauern, Wehre, Seewasserfassungen, Leitungen und Seekabel systematisch prüfen.</p></div>
+      <div><b>Suche und Bergung</b><p>Rastersuche mit GPS-Protokoll, auch bei Nullsicht. Gegenstände, Geräte, Fahrzeuge und Boote.</p></div>
+      <div><b>Unterwasserarbeiten</b><p>Montage, Reparatur, Wartung und Reinigung ohne Trockenlegung und ohne Betriebsunterbruch.</p></div>
+      <div><b>Gefahrstoffe und Sprengtechnik</b><p>Gefahrstoffe lokalisieren und dokumentieren. Zivile Sprengarbeiten durch zertifizierten Sprengmeister.</p></div>
+      <div><b>Dokumentation und Gutachten</b><p>Tauchbericht, Fotos, 4K-Video und Positionen für Bauakten, Gutachten und Versicherungen.</p></div>
+      <div><b>Engineering und Entwicklung</b><p>Problemanalyse, Konzept, Konstruktion von Halterungen und Vorrichtungen, Montage durch den eigenen Taucher.</p></div>
+      <div><b>Projektleitung</b><p>Planung und Koordination von Unterwasserprojekten: Termine, Sicherheit, Beteiligte und Abschluss.</p></div>
+      <div><b>Notfall und Eilaufträge</b><p>24/7 alarmierbar bei Schäden, Verlusten und dringenden Kontrollen, zum Beispiel nach Hochwasser.</p></div>
+    </div>
+    <div class="imgrow">
+      <img src="../img/eigen-seekabel.jpg" alt="">
+      <img src="../img/eigen-leitung-muscheln.jpg" alt="">
+      <img src="../img/eigen-inspektion-wand.jpg" alt="">
+    </div>
+  </div>
+  <div class="foot">
+    <div><b>Industrietaucher.ch</b><br>Under Pressure Group · Luzern</div>
+    <div class="r">+41 77 921 71 36 · info@industrietaucher.ch<br>industrietaucher.ch · <span class="red">24/7 Notfall</span></div>
+  </div>
+</section>
+
+<!-- SEITE 2 -->
+<section class="page">
+  <div class="body" style="padding-top:14mm">
+    <div class="two">
+      <div>
+        <div class="kicker">Für die öffentliche Hand</div>
+        <h2>Partner für Städte, Gemeinden und Werke</h2>
+        <ul class="rows">
+          <li><b>Tiefbau und Wasserbau</b><span>Zustandskontrolle von Pfeilern, Ufermauern, Wehren und Einläufen</span></li>
+          <li><b>Werke und Wasserversorgung</b><span>Seewasserfassungen, Rechen, Siebe, Leitungen, Muschelbewuchs</span></li>
+          <li><b>Immobilien und Bäder</b><span>Einsätze an Liegenschaften, Hallen- und Seebädern</span></li>
+          <li><b>Polizei und Feuerwehr</b><span>Suche und Bergung, protokolliert und vertraulich</span></li>
+          <li><b>Umwelt und Gewässerschutz</b><span>Lokalisierung von Gefahrstoffen und Altlasten</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="kicker">Zusammenarbeit</div>
+        <h2>Was Sie erwarten können</h2>
+        <ul class="checks">
+          <li><b>Schriftliche Offerte innert 24 Stunden</b>, auf Wunsch mit Kostendach</li>
+          <li><b>Öffentliche Preisliste</b> als Grundlage für Budget und Vergleich</li>
+          <li><b>Tauchbericht mit Fotos und Video</b> bei jedem Einsatz inklusive</li>
+          <li><b>Koordination</b> mit Polizei, Fachstellen und Bauleitung</li>
+          <li><b>Rahmenvereinbarungen</b> für wiederkehrende Kontrollen</li>
+          <li><b>Vertraulichkeit</b>: Befunde erhält nur der Auftraggeber</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="band">
+      <div class="kicker">Qualifikation</div>
+      <div class="two" style="gap:6mm">
+        <ul class="checks">
+          <li><b>Ausgebildeter Industrietaucher</b></li>
+          <li><b>Zertifizierter Sprengmeister</b>, Sprengberechtigung Schweiz</li>
+          <li><b>Gelernter Konstrukteur</b></li>
+        </ul>
+        <ul class="checks">
+          <li><b>Technisches Tauchen</b> mit Nitrox und Trimix</li>
+          <li><b>Seilzugang</b> kombiniert mit Tauchen</li>
+          <li><b>ISO-Zertifizierung</b> in Vorbereitung</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:8mm">
+      <div class="kicker">Ablauf</div>
+      <div class="steps">
+        <div><i>01</i><b>Anfrage</b>Ort, Gewässer, Tiefe und Ziel</div>
+        <div><i>02</i><b>Abklärung</b>Machbarkeit, Sicherheit, Zugang</div>
+        <div><i>03</i><b>Offerte</b>schriftlich innert 24 h</div>
+        <div><i>04</i><b>Einsatz</b>gesichert und dokumentiert</div>
+        <div><i>05</i><b>Bericht</b>Befund, Fotos, Video</div>
+      </div>
+    </div>
+
+    <div style="margin-top:8mm">
+      <div class="kicker">Auftraggeber (Auswahl)</div>
+      <div class="clients">
+        <div>Stadt Zürich</div><div>Immobilien Stadt Zürich</div><div>Hallenbad Stadt Zürich</div><div>Stadt Luzern</div>
+        <div>Stadt Thun</div><div>Rimmo AG</div><div>Hotel Seepark am Rigi</div><div>Private und Industrie</div>
+      </div>
+    </div>
+
+    <p class="warn">Keine Personenrettung: Bei Personen im Wasser sofort 117, 118 oder 144 alarmieren. Keine Bergung militärischer Munition. Preise und Bedingungen: industrietaucher.ch/preisliste.html und /agb.html.</p>
+  </div>
+  <div class="foot">
+    <div><b>Offerte anfordern</b><br>industrietaucher.ch/kontakt.html</div>
+    <div class="r"><b>+41 77 921 71 36</b><br>info@industrietaucher.ch · 24/7 auch per WhatsApp</div>
+  </div>
+</section>
+
+</body>
+</html>

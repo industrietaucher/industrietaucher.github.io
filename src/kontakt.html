@@ -1,0 +1,77 @@
+<!--{"title": "Kontakt und Offertanfrage | Industrietaucher.ch", "description": "Offerte für Unterwasserarbeiten anfordern: Telefon +41 77 921 71 36, info@industrietaucher.ch. Schriftliche Offerte innert 24 Stunden."}-->
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="kicker">Kontakt</div>
+    <h1>Offerte anfordern</h1>
+    <p class="lead">Beschreiben Sie Ort, Gewässer, Tiefe und Ziel. Sie erhalten innert 24 Stunden eine schriftliche Offerte.</p>
+  </div>
+</div>
+
+<section class="sec sec-white" style="padding-top:3.5rem">
+  <div class="wrap contact-grid">
+    <div class="contact-direct">
+      <h2>Direkt erreichbar</h2>
+      <dl>
+        <div><dt>Telefon und WhatsApp, 24/7 für Notfälle</dt><dd><a href="tel:+41779217136">+41 77 921 71 36</a></dd></div>
+        <div><dt>E-Mail</dt><dd><a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></dd></div>
+        <div><dt>Standort</dt><dd>Luzern, Einsätze schweizweit</dd></div>
+      </dl>
+      <div class="panel" style="margin-top:2rem">
+        <h3>Das hilft uns bei der Offerte</h3>
+        <ul class="dots">
+          <li>Ort, Gewässer und Zugang (Ufer, Steg, Boot)</li>
+          <li>Geschätzte Tiefe und Sichtverhältnisse</li>
+          <li>Ziel des Einsatzes und gewünschtes Ergebnis</li>
+          <li>Pläne, Fotos oder frühere Berichte</li>
+          <li>Gewünschter Zeitraum</li>
+        </ul>
+      </div>
+      <p class="note" style="margin-top:1.5rem">Keine Stellenanfragen bitte. Wir stellen aktuell niemanden ein, siehe <a href="jobs.html">Jobs</a>.</p>
+    </div>
+    <form class="form" onsubmit="sendForm(event)">
+      <div>
+        <label for="f-name">Behörde, Firma oder Name</label>
+        <input id="f-name" type="text" name="name" required>
+      </div>
+      <div>
+        <label for="f-person">Ansprechperson</label>
+        <input id="f-person" type="text" name="person">
+      </div>
+      <div class="full">
+        <label for="f-contact">Telefon oder E-Mail</label>
+        <input id="f-contact" type="text" name="contact" required>
+      </div>
+      <div class="full">
+        <label for="anfrage-type">Art des Auftrags</label>
+        <select id="anfrage-type" name="type">
+          <option value="">Bitte wählen</option>
+          <option value="inspektion">Inspektion und Zustandsaufnahme</option>
+          <option value="bergung">Suche und Bergung</option>
+          <option value="unterwasserarbeiten">Unterwasserarbeiten (Montage, Wartung, Reinigung)</option>
+          <option value="gefahrstoffe">Gefahrstoffe und Sprengtechnik</option>
+          <option value="foto">Dokumentation, Foto und Video</option>
+          <option value="engineering">Engineering und Entwicklung</option>
+          <option value="projektleitung">Projektleitung</option>
+          <option value="notfall">Notfall oder Eilauftrag</option>
+          <option value="rahmen">Rahmenvereinbarung</option>
+          <option value="sonstiges">Sonstiges</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-ort">Ort und Gewässer</label>
+        <input id="f-ort" type="text" name="ort">
+      </div>
+      <div>
+        <label for="f-termin">Gewünschter Zeitraum</label>
+        <input id="f-termin" type="text" name="termin">
+      </div>
+      <div class="full">
+        <label for="f-msg">Beschreibung</label>
+        <textarea id="f-msg" name="message" required></textarea>
+      </div>
+      <div class="full"><button type="submit" class="btn btn-primary">Anfrage per E-Mail senden</button></div>
+      <p class="form-ok" id="form-ok">Ihr E-Mail-Programm sollte sich jetzt mit der vorbereiteten Anfrage öffnen. Falls nicht, schreiben Sie direkt an info@industrietaucher.ch.</p>
+    </form>
+  </div>
+</section>

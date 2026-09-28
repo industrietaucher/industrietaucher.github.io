@@ -1,32 +1,31 @@
-/* industrietaucher.ch · gemeinsames Script für alle Seiten */
+/* industrietaucher.ch · gemeinsames Script */
+
+/* Farbmodus: Systemeinstellung, per Knopf übersteuerbar */
+(function () {
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.getAttribute('data-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
 
 /* Mobilmenü */
-function toggleMenu() {
-  var nav = document.getElementById('main-nav');
-  var btn = document.querySelector('.menu-btn');
-  var open = nav.classList.toggle('open');
-  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-}
-document.addEventListener('click', function (e) {
-  if (e.target.closest('#main-nav a')) {
-    var nav = document.getElementById('main-nav');
-    if (nav) nav.classList.remove('open');
-  }
-});
-
-/* Sprache (Auswahl bleibt beim Seitenwechsel erhalten) */
-function setLang(lang) {
-  document.body.classList.toggle('en', lang === 'en');
-  document.querySelectorAll('.lang-btn').forEach(function (b) {
-    b.classList.toggle('active', b.dataset.lang === lang);
-  });
-  try { localStorage.setItem('lang', lang); } catch (err) {}
-}
 (function () {
-  var lang = 'de';
-  try { lang = localStorage.getItem('lang') || 'de'; } catch (err) {}
-  // Nur auf zweisprachigen Seiten (mit Sprachumschalter) anwenden
-  if (lang === 'en' && document.querySelector('.lang-btn')) setLang('en');
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  if (!burger || !menu) return;
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.closest('a')) menu.classList.remove('open');
+  });
 })();
 
 /* Bildergalerie */
@@ -43,12 +42,13 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
 
-/* Leistung wählen und zum Formular springen */
-function selectService(type) {
+/* Kontaktformular: Auftragsart aus der URL übernehmen (?art=inspektion) */
+(function () {
   var sel = document.getElementById('anfrage-type');
-  if (sel) sel.value = type;
-  document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+  if (!sel) return;
+  var m = location.search.match(/[?&]art=([a-z-]+)/);
+  if (m) sel.value = m[1];
+})();
 
 /* Kontaktformular: öffnet das Mailprogramm mit vorausgefüllter Anfrage */
 function sendForm(e) {
@@ -60,9 +60,11 @@ function sendForm(e) {
   var subject = 'Anfrage industrietaucher.ch: ' + typ;
   var body =
     'Auftraggeber: ' + d.get('name') + '\n' +
+    'Ansprechperson: ' + (d.get('person') || '') + '\n' +
     'Kontakt: ' + d.get('contact') + '\n' +
     'Art: ' + typ + '\n' +
-    'Ort / Gewässer: ' + (d.get('ort') || '') + '\n\n' +
+    'Ort / Gewässer: ' + (d.get('ort') || '') + '\n' +
+    'Gewünschter Zeitraum: ' + (d.get('termin') || '') + '\n\n' +
     'Beschreibung:\n' + d.get('message');
   window.location.href = 'mailto:info@industrietaucher.ch?subject=' +
     encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);

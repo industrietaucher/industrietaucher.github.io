@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://industrietaucher.ch/</loc>
+    <loc>https://industrietaucher.ch/agb.html</loc>
     <lastmod>2026-09-28</lastmod>
-    <priority>1.0</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://industrietaucher.ch/preisliste.html</loc>
+    <loc>https://industrietaucher.ch/behoerden.html</loc>
     <lastmod>2026-09-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://industrietaucher.ch/jobs.html</loc>
+    <loc>https://industrietaucher.ch/dokumentation.html</loc>
     <lastmod>2026-09-28</lastmod>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/engineering.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/firma.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://industrietaucher.ch/impressum.html</loc>
@@ -21,8 +31,58 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://industrietaucher.ch/agb.html</loc>
+    <loc>https://industrietaucher.ch/</loc>
     <lastmod>2026-09-28</lastmod>
-    <priority>0.3</priority>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/inspektion.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/jobs.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/kontakt.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/notfall.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/preisliste.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/projektleitung.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/referenzen.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/sprengtechnik.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/suche-bergung.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://industrietaucher.ch/unterwasserarbeiten.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

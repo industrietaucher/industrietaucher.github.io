@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- Schemazeichnung: Seewasserfassung mit Halterung, Blaupausen-Stil -->
+  <defs>
+    <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#2a5a8f" stroke-width="0.5"/>
+    </pattern>
+    <marker id="a" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 1L7 4L0 7Z" fill="#cfe0f5"/>
+    </marker>
+  </defs>
+  <rect width="400" height="300" fill="#0f2a4a"/>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <!-- Wasserspiegel -->
+  <path d="M20 70H380" stroke="#8fb3e6" stroke-width="1.2" stroke-dasharray="8 4"/>
+  <text x="24" y="62" fill="#8fb3e6" font-size="10">WSP 433.60</text>
+  <!-- Seegrund -->
+  <path d="M20 250L120 238L220 246L300 232L380 240" fill="none" stroke="#cfe0f5" stroke-width="1.5"/>
+  <path d="M20 250L120 238L220 246L300 232L380 240V300H20Z" fill="#0c223d"/>
+  <!-- Leitung -->
+  <path d="M20 205H250" stroke="#cfe0f5" stroke-width="10" stroke-linecap="round"/>
+  <path d="M20 205H250" stroke="#0f2a4a" stroke-width="6" stroke-linecap="round"/>
+  <!-- Einlaufkorb -->
+  <rect x="250" y="185" width="48" height="40" fill="none" stroke="#cfe0f5" stroke-width="1.5"/>
+  <path d="M258 185V225M266 185V225M274 185V225M282 185V225M290 185V225" stroke="#cfe0f5" stroke-width="0.8"/>
+  <!-- Halterung / Sockel -->
+  <path d="M150 211V236M142 236H158M190 211V240M182 240H198" stroke="#f2c14e" stroke-width="2"/>
+  <circle cx="150" cy="205" r="9" fill="none" stroke="#f2c14e" stroke-width="1.5"/>
+  <circle cx="190" cy="205" r="9" fill="none" stroke="#f2c14e" stroke-width="1.5"/>
+  <text x="138" y="182" fill="#f2c14e" font-size="10">Pos. 3 / 4</text>
+  <path d="M160 185L150 195" stroke="#f2c14e" stroke-width="0.8"/>
+  <!-- Bemassung Tiefe -->
+  <path d="M340 72V183" stroke="#cfe0f5" stroke-width="0.8" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="346" y="132" fill="#cfe0f5" font-size="11">-18.40</text>
+  <!-- Bemassung Länge -->
+  <path d="M150 268H190" stroke="#cfe0f5" stroke-width="0.8" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="156" y="284" fill="#cfe0f5" font-size="10">1500</text>
+  <!-- Schriftfeld -->
+  <rect x="24" y="16" width="214" height="30" fill="none" stroke="#8fb3e6" stroke-width="0.8"/>
+  <text x="32" y="35" fill="#cfe0f5" font-size="11" font-weight="bold">SEEWASSERFASSUNG · SCHEMA</text>
+</svg>

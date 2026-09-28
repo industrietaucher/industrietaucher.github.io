@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Impressum und Datenschutz | Industrietaucher.ch</title>
-<meta name="description" content="Impressum und Datenschutz von industrietaucher.ch, Under Pressure Group.">
+<title>Kontakt und Offertanfrage | Industrietaucher.ch</title>
+<meta name="description" content="Offerte für Unterwasserarbeiten anfordern: Telefon +41 77 921 71 36, info@industrietaucher.ch. Schriftliche Offerte innert 24 Stunden.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://industrietaucher.ch/impressum.html">
+<link rel="canonical" href="https://industrietaucher.ch/kontakt.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Industrietaucher.ch">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="Impressum und Datenschutz | Industrietaucher.ch">
-<meta property="og:description" content="Impressum und Datenschutz von industrietaucher.ch, Under Pressure Group.">
-<meta property="og:url" content="https://industrietaucher.ch/impressum.html">
+<meta property="og:title" content="Kontakt und Offertanfrage | Industrietaucher.ch">
+<meta property="og:description" content="Offerte für Unterwasserarbeiten anfordern: Telefon +41 77 921 71 36, info@industrietaucher.ch. Schriftliche Offerte innert 24 Stunden.">
+<meta property="og:url" content="https://industrietaucher.ch/kontakt.html">
 <meta property="og:image" content="https://industrietaucher.ch/img/taucher-gesichert-oberflaeche.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<!-- Diese Datei wird von tools/build.py erzeugt. Inhalt bearbeiten in src/impressum.html -->
+<!-- Diese Datei wird von tools/build.py erzeugt. Inhalt bearbeiten in src/kontakt.html -->
 <div class="util">
   <div class="wrap">
     <span>Unterwasserarbeiten und Engineering · schweizweit</span>
@@ -58,7 +58,7 @@
       <li><a href="firma.html">Firma</a></li>
       <li><a href="preisliste.html">Preise</a></li>
       <li><a href="jobs.html">Jobs</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
       <li><a class="btn-notfall-nav" href="https://notfalltaucher.ch" target="_blank" rel="noopener">Notfall</a></li>
     </ul>
     <div class="nav-actions">
@@ -79,162 +79,79 @@
 <main>
 <div class="page-head">
   <div class="wrap">
-    <p class="kicker">Rechtliche Angaben</p>
-    <h1>Impressum und Datenschutz</h1>
+    <div class="kicker">Kontakt</div>
+    <h1>Offerte anfordern</h1>
+    <p class="lead">Beschreiben Sie Ort, Gewässer, Tiefe und Ziel. Sie erhalten innert 24 Stunden eine schriftliche Offerte.</p>
   </div>
 </div>
 
-<div class="page-body"><div class="wrap imp-grid">
-
-  <!-- BETREIBER -->
-  <div>
-    <div class="block">
-      <p class="block-label">
-        Betreiber & Verantwortlicher
-        
-      </p>
-      <p>
-        <strong>Under Pressure Group</strong><br>
-        Inhaber: Michael Küng<br>
-        Luzern, Schweiz
-      </p>
+<section class="sec sec-white" style="padding-top:3.5rem">
+  <div class="wrap contact-grid">
+    <div class="contact-direct">
+      <h2>Direkt erreichbar</h2>
+      <dl>
+        <div><dt>Telefon und WhatsApp, 24/7 für Notfälle</dt><dd><a href="tel:+41779217136">+41 77 921 71 36</a></dd></div>
+        <div><dt>E-Mail</dt><dd><a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></dd></div>
+        <div><dt>Standort</dt><dd>Luzern, Einsätze schweizweit</dd></div>
+      </dl>
+      <div class="panel" style="margin-top:2rem">
+        <h3>Das hilft uns bei der Offerte</h3>
+        <ul class="dots">
+          <li>Ort, Gewässer und Zugang (Ufer, Steg, Boot)</li>
+          <li>Geschätzte Tiefe und Sichtverhältnisse</li>
+          <li>Ziel des Einsatzes und gewünschtes Ergebnis</li>
+          <li>Pläne, Fotos oder frühere Berichte</li>
+          <li>Gewünschter Zeitraum</li>
+        </ul>
+      </div>
+      <p class="note" style="margin-top:1.5rem">Keine Stellenanfragen bitte. Wir stellen aktuell niemanden ein, siehe <a href="jobs.html">Jobs</a>.</p>
     </div>
-
-    <div class="block">
-      <p class="block-label">
-        Kontakt
-        
-      </p>
-      <p>
-        Telefon / WhatsApp:
-        
-      </p>
-      <p><a href="tel:+41779217136">+41 77 921 71 36</a><br>
-      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></p>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Unternehmensform
-        
-      </p>
-      <p>
-        Einzelunternehmen
-        
-      </p>
-    </div>
+    <form class="form" onsubmit="sendForm(event)">
+      <div>
+        <label for="f-name">Behörde, Firma oder Name</label>
+        <input id="f-name" type="text" name="name" required>
+      </div>
+      <div>
+        <label for="f-person">Ansprechperson</label>
+        <input id="f-person" type="text" name="person">
+      </div>
+      <div class="full">
+        <label for="f-contact">Telefon oder E-Mail</label>
+        <input id="f-contact" type="text" name="contact" required>
+      </div>
+      <div class="full">
+        <label for="anfrage-type">Art des Auftrags</label>
+        <select id="anfrage-type" name="type">
+          <option value="">Bitte wählen</option>
+          <option value="inspektion">Inspektion und Zustandsaufnahme</option>
+          <option value="bergung">Suche und Bergung</option>
+          <option value="unterwasserarbeiten">Unterwasserarbeiten (Montage, Wartung, Reinigung)</option>
+          <option value="gefahrstoffe">Gefahrstoffe und Sprengtechnik</option>
+          <option value="foto">Dokumentation, Foto und Video</option>
+          <option value="engineering">Engineering und Entwicklung</option>
+          <option value="projektleitung">Projektleitung</option>
+          <option value="notfall">Notfall oder Eilauftrag</option>
+          <option value="rahmen">Rahmenvereinbarung</option>
+          <option value="sonstiges">Sonstiges</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-ort">Ort und Gewässer</label>
+        <input id="f-ort" type="text" name="ort">
+      </div>
+      <div>
+        <label for="f-termin">Gewünschter Zeitraum</label>
+        <input id="f-termin" type="text" name="termin">
+      </div>
+      <div class="full">
+        <label for="f-msg">Beschreibung</label>
+        <textarea id="f-msg" name="message" required></textarea>
+      </div>
+      <div class="full"><button type="submit" class="btn btn-primary">Anfrage per E-Mail senden</button></div>
+      <p class="form-ok" id="form-ok">Ihr E-Mail-Programm sollte sich jetzt mit der vorbereiteten Anfrage öffnen. Falls nicht, schreiben Sie direkt an info@industrietaucher.ch.</p>
+    </form>
   </div>
-
-  <!-- WEBSITES -->
-  <div>
-    <div class="block">
-      <p class="block-label">
-        Betriebene Websites
-        
-      </p>
-      <p>
-        <a href="https://notfalltaucher.ch" target="_blank">notfalltaucher.ch</a>
-        <span style="color:var(--muted);font-size:0.82rem;">Notfalleinsätze & Unterwasser-Problemlösung</span>
-      </p>
-      <p style="margin-top:1rem;">
-        <a href="https://industrietaucher.ch" target="_blank">industrietaucher.ch</a>
-        <span style="color:var(--muted);font-size:0.82rem;">Industrielle Unterwasser-Dienstleistungen</span>
-      </p>
-      <p style="margin-top:1rem;">
-        <a href="https://underpressure.ch" target="_blank">underpressure.ch</a>
-        <span style="color:var(--muted);font-size:0.82rem;">Unternehmenswebsite Under Pressure Group</span>
-      </p>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Domain-Registrar
-        
-      </p>
-      <p>
-        Hosttech GmbH<br>
-        Seestrasse 15a<br>
-        8805 Richterswil<br>
-        <a href="https://hosttech.ch" target="_blank">hosttech.ch</a>
-      </p>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Hosting
-        
-      </p>
-      <p>
-        GitHub Pages<br>
-        GitHub, Inc.<br>
-        88 Colin P Kelly Jr St<br>
-        San Francisco, CA 94107, USA<br>
-        <a href="https://pages.github.com" target="_blank">pages.github.com</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- FULL WIDTH SECTIONS -->
-  <div class="full-width">
-
-    <div class="block">
-      <p class="block-label">
-        Haftungsausschluss Inhalte
-        
-      </p>
-      <div class="disclaimer">
-        Die Inhalte dieser Websites wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Under Pressure Group behält sich das Recht vor, die Inhalte jederzeit ohne Ankündigung zu ändern.
-        
-      </div>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Haftungsausschluss Links
-        
-      </p>
-      <div class="disclaimer">
-        Diese Websites enthalten Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.
-        
-      </div>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Urheberrecht
-        
-      </p>
-      <div class="disclaimer">
-        Die durch den Betreiber erstellten Inhalte und Werke auf diesen Websites unterliegen dem Schweizer Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung von Under Pressure Group. Bildmaterial von Pexels.com unterliegt der jeweiligen Pexels-Lizenz.
-        
-      </div>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Datenschutz
-        
-      </p>
-      <div class="disclaimer">
-        Diese Websites erheben keine persönlichen Daten durch Formulare oder Tracking-Tools. Beim Kontakt per E-Mail oder Telefon werden die übermittelten Daten ausschliesslich zur Bearbeitung der Anfrage verwendet und nicht an Dritte weitergegeben. Es gilt das Schweizer Datenschutzgesetz (DSG).
-        
-      </div>
-    </div>
-
-    <div class="block">
-      <p class="block-label">
-        Anwendbares Recht
-        
-      </p>
-      <p>
-        Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist der Geschäftssitz im Kanton Luzern.
-        
-      </p>
-    </div>
-
-  </div>
-
-</div></div>
+</section>
 </main>
 
 <footer class="site-footer">
