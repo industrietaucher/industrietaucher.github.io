@@ -106,7 +106,7 @@ def header(page):
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Industrietaucher.ch, Startseite">
       {FLAG_SVG}
-      <span class="brand-name">Industrietaucher.ch<small>Under Pressure Group</small></span>
+      <span class="brand-name">Industrietaucher.ch<small>Unterwasserarbeiten und Engineering</small></span>
     </a>
     <ul class="menu" id="menu">
       <li class="has-sub"><a href="index.html#leistungen"{leist_cur}>Leistungen</a>
@@ -140,7 +140,7 @@ def footer():
     <div class="cols">
       <div>
         <h4>Industrietaucher.ch</h4>
-        <p>Unterwasserarbeiten, Inspektion und Engineering für Behörden, Gemeinden, Werke und Industrie. Ein Angebot der Under Pressure Group, Luzern.</p>
+        <p>Unterwasserarbeiten, Inspektion und Engineering für Behörden, Gemeinden, Werke und Industrie. Sitz in Luzern, Einsätze schweizweit.</p>
       </div>
       <div>
         <h4>Leistungen</h4>
@@ -170,7 +170,7 @@ def footer():
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 Under Pressure Group</span>
+      <span>© 2026 Industrietaucher.ch</span>
       <span><a href="impressum.html">Impressum und Datenschutz</a> · <a href="agb.html">AGB</a></span>
     </div>
   </div>
