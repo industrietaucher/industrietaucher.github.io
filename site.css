@@ -380,3 +380,85 @@ h3 { font-size: 1.15rem; margin-bottom: 0.45rem; }
 .hero .wrap, .page-hero .wrap { z-index: 2; }
 .client { min-width: 0; overflow-wrap: break-word; hyphens: auto; }
 @media (max-width: 640px) { .price-table { display: block; overflow-x: auto; } }
+
+/* ══ Überarbeitung: ruhiger, mehr Luft, mehr Bild ══ */
+.sec { padding: 6.5rem 0; }
+.head { margin-bottom: 3.2rem; }
+.lead { color: var(--ink-2); line-height: 1.65; }
+h2 { letter-spacing: -0.02em; }
+
+/* Karten ohne Rahmen, nur Linie oben */
+.card { background: none; border: 0; border-top: 2px solid var(--ink); padding: 1.3rem 0 0; }
+.card .num { margin-bottom: 0.4rem; }
+.sec-dark .card { background: none; border-top-color: rgba(255,255,255,.35); }
+.grid-3 { gap: 2.4rem 2.2rem; }
+
+/* Leistungskacheln: Bild gross, Text knapp */
+.areas { gap: 2rem 1.5rem; }
+.area { background: none; border: 0; }
+.area:hover { transform: none; box-shadow: none; border: 0; }
+.area-media { aspect-ratio: 4/3; }
+.area-media img { transition: transform .5s ease; }
+.area:hover .area-media img { transform: scale(1.04); }
+.area-body { padding: 1rem 0 0; }
+.area-body h3 { font-size: 1.12rem; }
+.area-body p { font-size: 0.95rem; margin-bottom: 0.6rem; }
+.area:hover h3 { color: var(--accent); }
+
+/* Grosses Bildband */
+.image-band { position: relative; min-height: 460px; display: flex; align-items: flex-end; color: #fff; background: #0c1822; overflow: hidden; }
+.image-band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.image-band::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(7,14,21,.85) 0%, rgba(7,14,21,.35) 55%, rgba(7,14,21,.1) 100%); }
+.image-band .wrap { position: relative; z-index: 2; width: 100%; padding-top: 4rem; padding-bottom: 3.5rem; }
+.image-band h2 { color: #fff; max-width: 40rem; margin-bottom: 0.6rem; }
+.image-band p { color: #d3dde6; max-width: 38rem; font-size: 1.1rem; }
+.image-band .kicker { color: #9cc0ee; }
+
+/* Split mit grossem Bild */
+.split-img { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4.5rem; align-items: center; }
+.split-img.rev > :first-child { order: 2; }
+.split-img .media-frame { aspect-ratio: 4/5; }
+
+/* Logos */
+.logo-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.logo-tile { background: var(--surface); height: 132px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.55rem; padding: 1rem; text-align: center; }
+.logo-tile img { max-height: 46px; max-width: 78%; width: auto; filter: brightness(0); opacity: .78; }
+.logo-tile .wordmark { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--ink); opacity: .85; line-height: 1.2; }
+.logo-tile small { font-size: 0.76rem; color: var(--muted); }
+:root[data-theme="dark"] .logo-tile img { filter: brightness(0) invert(1); opacity: .85; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-tile img { filter: brightness(0) invert(1); opacity: .85; } }
+
+/* Google-Bewertung */
+.rating { display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: 0.9rem 1.3rem; border-radius: 3px; }
+.rating:hover { border-color: var(--accent); color: var(--ink); }
+.rating .g { width: 28px; height: 28px; flex-shrink: 0; }
+.rating .score { font-size: 1.7rem; font-weight: 700; line-height: 1; }
+.rating .stars { color: #f2a900; letter-spacing: 2px; font-size: 1.05rem; line-height: 1; }
+.rating small { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 0.25rem; }
+.refs-foot { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+
+/* Kennzahlen im Hero: 3 Spalten */
+.hero-facts .wrap { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 1100px) { .logo-wall { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 860px) {
+  .split-img { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split-img.rev > :first-child { order: 0; }
+  .split-img .media-frame { aspect-ratio: 4/3; }
+  .hero-facts .wrap { grid-template-columns: 1fr 1fr 1fr; }
+  .hero-facts div:nth-child(3) { border-left: 1px solid var(--line); padding-left: 1rem; border-top: 0; }
+  .image-band { min-height: 380px; }
+}
+@media (max-width: 640px) {
+  .sec { padding: 4rem 0; }
+  .logo-wall { grid-template-columns: 1fr 1fr; }
+  .logo-tile { height: 112px; }
+  .hero-facts div { padding: 1rem 0.5rem 1rem 0; }
+  .hero-facts div + div { padding-left: 0.7rem; }
+  .hero-facts b { font-size: 1.2rem; }
+  .hero-facts span { font-size: 0.75rem; }
+  .areas { grid-template-columns: 1fr; }
+}
+.logo-wall { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+@media (max-width: 640px) { .logo-wall { grid-template-columns: 1fr 1fr; } }
+.logo-tile img[src*="zuerich"] { max-height: 70px; max-width: 88%; }
