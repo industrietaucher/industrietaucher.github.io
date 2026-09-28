@@ -49,8 +49,8 @@ CLIENTS = [
     ("img/logos/stadt-zuerich.svg", "Stadt Zürich", "Immobilien und Hallenbad"),
     ("img/logos/stadt-luzern.svg", "Stadt Luzern", ""),
     ("img/logos/stadt-thun.svg", "Stadt Thun", ""),
-    (None, "Rimmo AG", "Immobilien"),
-    (None, "Hotel Seepark am Rigi", "Hotellerie"),
+    (None, "RIMO AG", "Immobilien, Reiden"),
+    ("img/logos/hotel-vitznauerhof.svg", "Hotel Vitznauerhof", ""),
 ]
 
 GOOGLE_G = ('<svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>'
@@ -201,7 +201,7 @@ def page(name, meta, body):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
-<link rel="stylesheet" href="site.css?v=6">
+<link rel="stylesheet" href="site.css?v=7">
 {extra_head}</head>
 <body>
 

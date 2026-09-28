@@ -462,3 +462,4 @@ h2 { letter-spacing: -0.02em; }
 .logo-wall { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
 @media (max-width: 640px) { .logo-wall { grid-template-columns: 1fr 1fr; } }
 .logo-tile img[src*="zuerich"] { max-height: 70px; max-width: 88%; }
+.logo-tile img[src*="vitznauerhof"] { max-height: 64px; }
