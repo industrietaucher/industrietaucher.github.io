@@ -3,330 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AGB – Under Pressure Group | Michael Küng</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #0e0d0b;
-    --deep: #161410;
-    --warm: #1e1b14;
-    --amber: #c8820a;
-    --gold: #f2bc50;
-    --white: #ede8de;
-    --muted: #8a8070;
-    --border: rgba(200,130,10,0.2);
-    --red: #c0392b;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
-    font-size: 0.92rem;
-    line-height: 1.8;
-  }
-
-  /* TOP BAR */
-  .topbar {
-    background: var(--warm);
-    border-bottom: 1px solid var(--border);
-    padding: 0.8rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .topbar-logo {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-decoration: none;
-  }
-
-  .topbar-links { display: flex; gap: 2rem; }
-  .topbar-links a {
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .topbar-links a:hover { color: var(--gold); }
-
-  /* HERO */
-  .hero {
-    background: var(--deep);
-    border-bottom: 2px solid var(--amber);
-    padding: 5rem 4rem 4rem;
-  }
-
-  .hero-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 1rem;
-  }
-
-  .hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero h1 span { color: var(--gold); }
-
-  .hero-meta {
-    display: flex;
-    gap: 3rem;
-    font-size: 0.78rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-
-  .hero-meta strong { color: var(--white); display: block; }
-
-  .lang-switch {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .lang-btn {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    padding: 0.3rem 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
-
-  .lang-btn.active, .lang-btn:hover {
-    border-color: var(--amber);
-    color: var(--gold);
-  }
-
-  /* WARNING BOX */
-  .warning-box {
-    background: rgba(192,57,43,0.08);
-    border: 1px solid rgba(192,57,43,0.4);
-    border-left: 4px solid var(--red);
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-    font-size: 0.85rem;
-    color: #e8b0aa;
-    line-height: 1.7;
-  }
-
-  .warning-box strong { color: #fff; }
-
-  /* LAYOUT */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 4rem;
-  }
-
-  /* SECTIONS */
-  .section {
-    margin-bottom: 4rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .section:last-child { border-bottom: none; }
-
-  .section-num {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 0.5rem;
-  }
-
-  .section h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
-    color: var(--white);
-  }
-
-  .section h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--gold);
-    margin: 1.5rem 0 0.5rem;
-  }
-
-  p { color: #c8c0b0; margin-bottom: 0.8rem; }
-
-  /* PRICE TABLE */
-  .price-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-    font-size: 0.88rem;
-  }
-
-  .price-table th {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--amber);
-    text-align: left;
-    padding: 0.6rem 1rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .price-table td {
-    padding: 0.7rem 1rem;
-    border-bottom: 1px solid rgba(200,130,10,0.08);
-    color: #c8c0b0;
-    vertical-align: top;
-  }
-
-  .price-table tr:hover td { background: var(--warm); }
-
-  .price-table .price {
-    color: var(--gold);
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .price-table .note {
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-
-  /* HIGHLIGHT */
-  .highlight {
-    background: var(--warm);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--amber);
-    padding: 1.2rem 1.5rem;
-    margin: 1rem 0;
-    font-size: 0.88rem;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 3rem 4rem;
-    text-align: center;
-    font-size: 0.78rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
-
-  footer a { color: var(--amber); text-decoration: none; }
-
-  /* Language */
-  [lang="en"] { display: none; }
-  body.en [lang="de"] { display: none; }
-  body.en [lang="en"] { display: block; }
-  body.en span[lang="en"] { display: inline; }
-  body.en span[lang="de"] { display: none; }
-  span[lang="de"] { display: inline; }
-
-  @media (max-width: 768px) {
-    .topbar { padding: 0.8rem 1.5rem; }
-    .topbar-links { display: none; }
-    .hero { padding: 4rem 1.5rem 3rem; }
-    .container { padding: 3rem 1.5rem; }
-    .hero-meta { gap: 1.5rem; }
-    footer { padding: 2rem 1.5rem; }
-  }
-</style>
+<title>AGB | Industrietaucher.ch</title>
+<meta name="description" content="Allgemeine Geschäftsbedingungen der Under Pressure Group für industrietaucher.ch und notfalltaucher.ch.">
+<link rel="canonical" href="https://industrietaucher.ch/agb.html">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-<div class="topbar">
-  <a class="topbar-logo" href="#">Under Pressure Group</a>
-  <div class="topbar-links">
-    <a href="https://notfalltaucher.ch" target="_blank">notfalltaucher.ch</a>
-    <a href="https://industrietaucher.ch" target="_blank">industrietaucher.ch</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-flag" viewBox="0 0 30 20" aria-hidden="true"><rect x="0.5" y="0.5" width="15" height="19" fill="#fff" stroke="#0e1a26" stroke-width="1"/><path d="M15 0H30L23 10L30 20H15Z" fill="#1b4b8f"/></svg>
+      <span class="brand-name">Industrietaucher.ch<small>Under Pressure Group</small></span>
+    </a>
+    <ul class="main-nav" id="main-nav">
+      <li><a href="index.html#behoerden"><span lang="de">Öffentliche Hand</span><span lang="en">Public sector</span></a></li>
+      <li><a href="index.html#leistungen"><span lang="de">Leistungen</span><span lang="en">Services</span></a></li>
+      <li><a href="index.html#referenzen"><span lang="de">Referenzen</span><span lang="en">References</span></a></li>
+      <li><a href="preisliste.html"><span lang="de">Preise</span><span lang="en">Prices</span></a></li>
+      <li><a href="jobs.html"><span lang="de">Jobs</span><span lang="en">Jobs</span></a></li>
+      <li><a href="index.html#kontakt"><span lang="de">Kontakt</span><span lang="en">Contact</span></a></li>
+      <li><a class="btn-notfall-nav" href="https://notfalltaucher.ch" target="_blank" rel="noopener"><span lang="de">Notfall</span><span lang="en">Emergency</span></a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-controls="main-nav">Menü</button>
+  </div>
+</header>
+
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="de">Allgemeine Geschäftsbedingungen</span><span lang="en">General Terms and Conditions</span></p>
+    <h1><span lang="de">AGB</span><span lang="en">Terms and Conditions</span></h1>
+    <p class="lead"><span lang="de">Gültig für alle Dienstleistungen der Under Pressure Group, Betreiberin von industrietaucher.ch und notfalltaucher.ch. Stand Mai 2026.</span><span lang="en">Applicable to all services of Under Pressure Group, operator of industrietaucher.ch and notfalltaucher.ch. Version May 2026.</span></p>
   </div>
 </div>
 
-<div class="hero">
-  <p class="hero-label">
-    <span lang="de">Allgemeine Geschäftsbedingungen</span>
-    <span lang="en">General Terms and Conditions</span>
-  </p>
-  <h1>
-    <span lang="de">AGB <span>Under Pressure Group</span></span>
-    <span lang="en">T&C <span>Under Pressure Group</span></span>
-  </h1>
-  <p style="color:var(--muted);max-width:600px;">
-    <span lang="de">Gültig für alle Dienstleistungen von Michael Küng, handelnd als Under Pressure Group, betreiber von notfalltaucher.ch und industrietaucher.ch.</span>
-    <span lang="en">Applicable to all services provided by Michael Küng, operating as Under Pressure Group, operator of notfalltaucher.ch and industrietaucher.ch.</span>
-  </p>
-  <div class="hero-meta">
-    <div>
-      <strong>Under Pressure Group</strong>
-      <span lang="de">Inhaber: Michael Küng</span>
-      <span lang="en">Owner: Michael Küng</span>
-    </div>
-    <div>
-      <strong>
-        <span lang="de">Adresse</span>
-        <span lang="en">Address</span>
-      </strong>
-      Erlenweg 10, 6010 Kriens, Schweiz
-    </div>
-    <div>
-      <strong>
-        <span lang="de">Kontakt</span>
-        <span lang="en">Contact</span>
-      </strong>
-      info@industrietaucher.ch
-    </div>
-    <div>
-      <strong>
-        <span lang="de">Stand</span>
-        <span lang="en">Version</span>
-      </strong>
-      Mai 2026
-    </div>
-  </div>
-  <div class="lang-switch">
-    <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
-    <button class="lang-btn" onclick="setLang('en')">English</button>
-  </div>
-</div>
-
-<div class="container">
+<div class="page-body"><div class="wrap">
 
   <!-- 1. GELTUNGSBEREICH -->
   <div class="section">
@@ -336,8 +52,8 @@
       <span lang="en">Scope of Application</span>
     </h2>
     <p>
-      <span lang="de">Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen, die Michael Küng, handelnd unter dem Namen <strong>Under Pressure Group</strong>, über die Plattformen notfalltaucher.ch und industrietaucher.ch sowie durch direkte Beauftragung erbringt.</span>
-      <span lang="en">These General Terms and Conditions apply to all services provided by Michael Küng, operating under the name <strong>Under Pressure Group</strong>, via the platforms notfalltaucher.ch and industrietaucher.ch, as well as through direct engagement.</span>
+      <span lang="de">Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen, die die <strong>Under Pressure Group</strong> (Inhaber: Michael Küng) über die Plattformen notfalltaucher.ch und industrietaucher.ch sowie durch direkte Beauftragung erbringt.</span>
+      <span lang="en">These General Terms and Conditions apply to all services provided by <strong>Under Pressure Group</strong> (owner: Michael Küng) via the platforms notfalltaucher.ch and industrietaucher.ch, as well as through direct engagement.</span>
     </p>
     <p>
       <span lang="de">Mit der Beauftragung von Dienstleistungen akzeptiert der Auftraggeber diese AGB vollumfänglich und ohne Einschränkung. Abweichende Bedingungen des Auftraggebers gelten nur, wenn sie schriftlich bestätigt wurden.</span>
@@ -509,44 +225,44 @@
     <table class="price-table">
       <tr>
         <td>
-          <span lang="de"><strong>Natürliche Bedingungen</strong> — Schlechte Sicht, Strömungen, unerwartete Sedimentaufwirbelung, Wetterwechsel und andere nicht beeinflussbare Unterwasserbedingungen.</span>
-          <span lang="en"><strong>Natural conditions</strong> — Poor visibility, currents, unexpected sediment disturbance, weather changes and other uncontrollable underwater conditions.</span>
+          <span lang="de"><strong>Natürliche Bedingungen</strong>: Schlechte Sicht, Strömungen, unerwartete Sedimentaufwirbelung, Wetterwechsel und andere nicht beeinflussbare Unterwasserbedingungen.</span>
+          <span lang="en"><strong>Natural conditions</strong>: Poor visibility, currents, unexpected sediment disturbance, weather changes and other uncontrollable underwater conditions.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Equipmentausfall</strong> — Schäden oder Nichterfolg von Einsätzen aufgrund technischen Versagens von Ausrüstungsgegenständen, sofern diese ordnungsgemäss gewartet wurden.</span>
-          <span lang="en"><strong>Equipment failure</strong> — Damage or unsuccessful operations due to technical failure of equipment, provided it was properly maintained.</span>
+          <span lang="de"><strong>Equipmentausfall</strong>: Schäden oder Nichterfolg von Einsätzen aufgrund technischen Versagens von Ausrüstungsgegenständen, sofern diese ordnungsgemäss gewartet wurden.</span>
+          <span lang="en"><strong>Equipment failure</strong>: Damage or unsuccessful operations due to technical failure of equipment, provided it was properly maintained.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Unvollständige Informationen</strong> — Schäden, die entstehen weil der Auftraggeber unvollständige, falsche oder irreführende Informationen über den Einsatzort, die Tiefe, vorhandene Strukturen oder Gefahren geliefert hat.</span>
-          <span lang="en"><strong>Incomplete information</strong> — Damages arising because the client provided incomplete, incorrect or misleading information about the site, depth, existing structures or hazards.</span>
+          <span lang="de"><strong>Unvollständige Informationen</strong>: Schäden, die entstehen weil der Auftraggeber unvollständige, falsche oder irreführende Informationen über den Einsatzort, die Tiefe, vorhandene Strukturen oder Gefahren geliefert hat.</span>
+          <span lang="en"><strong>Incomplete information</strong>: Damages arising because the client provided incomplete, incorrect or misleading information about the site, depth, existing structures or hazards.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Sprengmittel & Gefahrstoffe</strong> — Bei Einsätzen mit Sprengmitteln oder Gefahrstoffen unter Wasser: jede Haftung für Folgeschäden, Erschütterungen, Druckwellen, unbeabsichtigte Detonationen von unbekannten Objekten sowie Schäden an der Umgebung, sofern der Einsatz nach Stand der Technik und geltendem Recht durchgeführt wurde.</span>
-          <span lang="en"><strong>Explosives & hazardous materials</strong> — For operations involving explosives or hazardous materials underwater: all liability for consequential damages, vibrations, pressure waves, unintended detonation of unknown objects, and damage to the surroundings, provided the operation was carried out in accordance with current standards and applicable law.</span>
+          <span lang="de"><strong>Sprengmittel & Gefahrstoffe</strong>: Bei Einsätzen mit Sprengmitteln oder Gefahrstoffen unter Wasser: jede Haftung für Folgeschäden, Erschütterungen, Druckwellen, unbeabsichtigte Detonationen von unbekannten Objekten sowie Schäden an der Umgebung, sofern der Einsatz nach Stand der Technik und geltendem Recht durchgeführt wurde.</span>
+          <span lang="en"><strong>Explosives & hazardous materials</strong>: For operations involving explosives or hazardous materials underwater: all liability for consequential damages, vibrations, pressure waves, unintended detonation of unknown objects, and damage to the surroundings, provided the operation was carried out in accordance with current standards and applicable law.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Nicht auffindbare Objekte</strong> — Keine Erfolgsgarantie bei Bergungseinsätzen. Wenn ein Objekt trotz professioneller Suche nicht gefunden oder nicht geborgen werden kann, ist die Einsatzpauschale trotzdem geschuldet.</span>
-          <span lang="en"><strong>Objects not found</strong> — No guarantee of success for recovery operations. If an object cannot be found or recovered despite professional searching, the deployment fee is still due.</span>
+          <span lang="de"><strong>Nicht auffindbare Objekte</strong>: Keine Erfolgsgarantie bei Bergungseinsätzen. Wenn ein Objekt trotz professioneller Suche nicht gefunden oder nicht geborgen werden kann, ist die Einsatzpauschale trotzdem geschuldet.</span>
+          <span lang="en"><strong>Objects not found</strong>: No guarantee of success for recovery operations. If an object cannot be found or recovered despite professional searching, the deployment fee is still due.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Folgeschäden</strong> — Entgangener Gewinn, Betriebsunterbrüche, indirekte Schäden oder Folgeschäden jeglicher Art sind vollständig ausgeschlossen.</span>
-          <span lang="en"><strong>Consequential damages</strong> — Loss of profit, business interruptions, indirect or consequential damages of any kind are fully excluded.</span>
+          <span lang="de"><strong>Folgeschäden</strong>: Entgangener Gewinn, Betriebsunterbrüche, indirekte Schäden oder Folgeschäden jeglicher Art sind vollständig ausgeschlossen.</span>
+          <span lang="en"><strong>Consequential damages</strong>: Loss of profit, business interruptions, indirect or consequential damages of any kind are fully excluded.</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span lang="de"><strong>Dritte</strong> — Schäden an Dritten, die sich ohne Genehmigung im Einsatzbereich aufhalten oder die Sicherheitsanweisungen von Under Pressure Group missachten.</span>
-          <span lang="en"><strong>Third parties</strong> — Damages to third parties who are present in the operation area without authorization or who disregard safety instructions from Under Pressure Group.</span>
+          <span lang="de"><strong>Dritte</strong>: Schäden an Dritten, die sich ohne Genehmigung im Einsatzbereich aufhalten oder die Sicherheitsanweisungen von Under Pressure Group missachten.</span>
+          <span lang="en"><strong>Third parties</strong>: Damages to third parties who are present in the operation area without authorization or who disregard safety instructions from Under Pressure Group.</span>
         </td>
       </tr>
     </table>
@@ -648,8 +364,8 @@
       <span lang="en">Applicable Law & Jurisdiction</span>
     </h2>
     <p>
-      <span lang="de">Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Kriens, Kanton Luzern, Schweiz. Under Pressure Group behält sich vor, Forderungen am Wohnsitz- bzw. Sitzort des Auftraggebers geltend zu machen.</span>
-      <span lang="en">Swiss law applies exclusively. Place of jurisdiction is Kriens, Canton of Lucerne, Switzerland. Under Pressure Group reserves the right to assert claims at the domicile or registered office of the client.</span>
+      <span lang="de">Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist der Geschäftssitz der Under Pressure Group im Kanton Luzern, Schweiz. Under Pressure Group behält sich vor, Forderungen am Wohnsitz- bzw. Sitzort des Auftraggebers geltend zu machen.</span>
+      <span lang="en">Swiss law applies exclusively. Place of jurisdiction is the registered place of business of Under Pressure Group in the Canton of Lucerne, Switzerland. Under Pressure Group reserves the right to assert claims at the domicile or registered office of the client.</span>
     </p>
     <p>
       <span lang="de">Sollten einzelne Bestimmungen dieser AGB ungültig sein, bleibt die Gültigkeit der übrigen Bestimmungen unberührt.</span>
@@ -670,27 +386,39 @@
     </p>
   </div>
 
-</div><!-- end container -->
+</div></div>
 
-<footer>
-  <p>© 2026 Under Pressure Group · Michael Küng · Erlenweg 10, 6010 Kriens</p>
-  <p style="margin-top:0.5rem;">
-    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
-    &nbsp;·&nbsp;
-    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
-  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Industrietaucher.ch</h4>
+        <p><span lang="de">Unterwasserarbeiten für Behörden, Gemeinden, Werke und Industrie. Ein Angebot der Under Pressure Group, Luzern.</span><span lang="en">Underwater work for authorities, municipalities, utilities and industry. A service of Under Pressure Group, Lucerne.</span></p>
+      </div>
+      <div>
+        <h4><span lang="de">Kontakt</span><span lang="en">Contact</span></h4>
+        <ul>
+          <li><a href="tel:+41779217136">+41 77 921 71 36</a></li>
+          <li><a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></li>
+          <li><a href="https://notfalltaucher.ch" target="_blank" rel="noopener">notfalltaucher.ch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span lang="de">Seiten</span><span lang="en">Pages</span></h4>
+        <ul>
+          <li><a href="preisliste.html"><span lang="de">Preisliste</span><span lang="en">Price list</span></a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="agb.html"><span lang="de">AGB</span><span lang="en">Terms</span></a></li>
+          <li><a href="impressum.html"><span lang="de">Impressum und Datenschutz</span><span lang="en">Legal notice and privacy</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Under Pressure Group</p>
+  </div>
 </footer>
 
-<script>
-function setLang(lang) {
-  document.body.classList.toggle('en', lang === 'en');
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.includes(lang === 'de' ? 'Deutsch' : 'English'));
-  });
-}
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>

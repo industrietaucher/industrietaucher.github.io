@@ -3,212 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum – Under Pressure Group | Michael Küng</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #0e0d0b;
-    --deep: #161410;
-    --warm: #1e1b14;
-    --amber: #c8820a;
-    --gold: #f2bc50;
-    --white: #ede8de;
-    --muted: #8a8070;
-    --border: rgba(200,130,10,0.2);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
-    font-size: 0.92rem;
-    line-height: 1.8;
-  }
-
-  .topbar {
-    background: var(--warm);
-    border-bottom: 1px solid var(--border);
-    padding: 0.8rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .topbar-logo {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-decoration: none;
-  }
-
-  .topbar-links { display: flex; gap: 2rem; }
-  .topbar-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
-  .topbar-links a:hover { color: var(--gold); }
-
-  .hero {
-    background: var(--deep);
-    border-bottom: 2px solid var(--amber);
-    padding: 5rem 4rem 4rem;
-  }
-
-  .hero-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 1rem;
-  }
-
-  .hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    line-height: 1;
-  }
-
-  .hero h1 span { color: var(--gold); }
-
-  .lang-switch {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .lang-btn {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    padding: 0.3rem 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-transform: uppercase;
-  }
-
-  .lang-btn.active, .lang-btn:hover { border-color: var(--amber); color: var(--gold); }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 5rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-
-  .block { margin-bottom: 2.5rem; }
-
-  .block-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 0.6rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.4rem;
-  }
-
-  .block p, .block a {
-    color: #c8c0b0;
-    text-decoration: none;
-    display: block;
-    line-height: 1.9;
-  }
-
-  .block a:hover { color: var(--gold); }
-
-  .block strong { color: var(--white); font-weight: 500; }
-
-  .full-width {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--border);
-    padding-top: 3rem;
-  }
-
-  .disclaimer {
-    background: var(--warm);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--amber);
-    padding: 1.2rem 1.5rem;
-    font-size: 0.85rem;
-    color: #c8c0b0;
-    line-height: 1.7;
-    margin-top: 1rem;
-  }
-
-  footer {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 3rem 4rem;
-    text-align: center;
-    font-size: 0.78rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
-
-  footer a { color: var(--amber); text-decoration: none; }
-
-  /* Language */
-  [lang="en"] { display: none; }
-  body.en [lang="de"] { display: none; }
-  body.en [lang="en"] { display: block; }
-  body.en span[lang="en"] { display: inline; }
-  body.en span[lang="de"] { display: none; }
-  span[lang="de"] { display: inline; }
-
-  @media (max-width: 768px) {
-    .topbar { padding: 0.8rem 1.5rem; }
-    .topbar-links { display: none; }
-    .hero { padding: 4rem 1.5rem 3rem; }
-    .container { padding: 3rem 1.5rem; grid-template-columns: 1fr; gap: 0; }
-    footer { padding: 2rem 1.5rem; }
-  }
-</style>
+<title>Impressum | Industrietaucher.ch</title>
+<meta name="description" content="Impressum und Datenschutz von industrietaucher.ch, Under Pressure Group.">
+<link rel="canonical" href="https://industrietaucher.ch/impressum.html">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-<div class="topbar">
-  <a class="topbar-logo" href="#">Under Pressure Group</a>
-  <div class="topbar-links">
-    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
-    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
-    <a href="agb.html">AGB</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-flag" viewBox="0 0 30 20" aria-hidden="true"><rect x="0.5" y="0.5" width="15" height="19" fill="#fff" stroke="#0e1a26" stroke-width="1"/><path d="M15 0H30L23 10L30 20H15Z" fill="#1b4b8f"/></svg>
+      <span class="brand-name">Industrietaucher.ch<small>Under Pressure Group</small></span>
+    </a>
+    <ul class="main-nav" id="main-nav">
+      <li><a href="index.html#behoerden"><span lang="de">Öffentliche Hand</span><span lang="en">Public sector</span></a></li>
+      <li><a href="index.html#leistungen"><span lang="de">Leistungen</span><span lang="en">Services</span></a></li>
+      <li><a href="index.html#referenzen"><span lang="de">Referenzen</span><span lang="en">References</span></a></li>
+      <li><a href="preisliste.html"><span lang="de">Preise</span><span lang="en">Prices</span></a></li>
+      <li><a href="jobs.html"><span lang="de">Jobs</span><span lang="en">Jobs</span></a></li>
+      <li><a href="index.html#kontakt"><span lang="de">Kontakt</span><span lang="en">Contact</span></a></li>
+      <li><a class="btn-notfall-nav" href="https://notfalltaucher.ch" target="_blank" rel="noopener"><span lang="de">Notfall</span><span lang="en">Emergency</span></a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-controls="main-nav">Menü</button>
+  </div>
+</header>
+
+<main>
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="de">Rechtliche Angaben</span><span lang="en">Legal notice</span></p>
+    <h1><span lang="de">Impressum und Datenschutz</span><span lang="en">Legal notice and privacy</span></h1>
   </div>
 </div>
 
-<div class="hero">
-  <p class="hero-label">
-    <span lang="de">Rechtliche Angaben</span>
-    <span lang="en">Legal Notice</span>
-  </p>
-  <h1>
-    <span lang="de">Impressum <span>Under Pressure Group</span></span>
-    <span lang="en">Imprint <span>Under Pressure Group</span></span>
-  </h1>
-  <div class="lang-switch">
-    <button class="lang-btn active" onclick="setLang('de')">Deutsch</button>
-    <button class="lang-btn" onclick="setLang('en')">English</button>
-  </div>
-</div>
-
-<div class="container">
+<div class="page-body"><div class="wrap imp-grid">
 
   <!-- BETREIBER -->
   <div>
@@ -220,9 +53,7 @@
       <p>
         <strong>Under Pressure Group</strong><br>
         <span lang="de">Inhaber:</span><span lang="en">Owner:</span> Michael Küng<br>
-        Erlenweg 10<br>
-        6010 Kriens<br>
-        Schweiz / Switzerland
+        <span lang="de">Luzern, Schweiz</span><span lang="en">Lucerne, Switzerland</span>
       </p>
     </div>
 
@@ -235,9 +66,8 @@
         <span lang="de">Telefon / WhatsApp:</span>
         <span lang="en">Phone / WhatsApp:</span>
       </p>
-      <a href="tel:+41779217136">+41 77 921 71 36</a>
-      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
-      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
+      <p><a href="tel:+41779217136">+41 77 921 71 36</a><br>
+      <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></p>
     </div>
 
     <div class="block">
@@ -357,36 +187,45 @@
         <span lang="en">Applicable Law</span>
       </p>
       <p>
-        <span lang="de">Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Kriens, Kanton Luzern.</span>
-        <span lang="en">Swiss law applies exclusively. Place of jurisdiction is Kriens, Canton of Lucerne.</span>
+        <span lang="de">Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist der Geschäftssitz im Kanton Luzern.</span>
+        <span lang="en">Swiss law applies exclusively. Place of jurisdiction is the place of business in the Canton of Lucerne.</span>
       </p>
     </div>
 
   </div>
 
-</div>
+</div></div>
+</main>
 
-<footer>
-  <p>© 2026 Under Pressure Group · Michael Küng · Erlenweg 10, 6010 Kriens</p>
-  <p style="margin-top:0.5rem;">
-    <a href="https://notfalltaucher.ch">notfalltaucher.ch</a>
-    &nbsp;·&nbsp;
-    <a href="https://industrietaucher.ch">industrietaucher.ch</a>
-    &nbsp;·&nbsp;
-    <a href="agb.html">AGB</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a>
-  </p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Industrietaucher.ch</h4>
+        <p><span lang="de">Unterwasserarbeiten für Behörden, Gemeinden, Werke und Industrie. Ein Angebot der Under Pressure Group, Luzern.</span><span lang="en">Underwater work for authorities, municipalities, utilities and industry. A service of Under Pressure Group, Lucerne.</span></p>
+      </div>
+      <div>
+        <h4><span lang="de">Kontakt</span><span lang="en">Contact</span></h4>
+        <ul>
+          <li><a href="tel:+41779217136">+41 77 921 71 36</a></li>
+          <li><a href="mailto:info@industrietaucher.ch">info@industrietaucher.ch</a></li>
+          <li><a href="https://notfalltaucher.ch" target="_blank" rel="noopener">notfalltaucher.ch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span lang="de">Seiten</span><span lang="en">Pages</span></h4>
+        <ul>
+          <li><a href="preisliste.html"><span lang="de">Preisliste</span><span lang="en">Price list</span></a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="agb.html"><span lang="de">AGB</span><span lang="en">Terms</span></a></li>
+          <li><a href="impressum.html"><span lang="de">Impressum und Datenschutz</span><span lang="en">Legal notice and privacy</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 Under Pressure Group</p>
+  </div>
 </footer>
 
-<script>
-function setLang(lang) {
-  document.body.classList.toggle('en', lang === 'en');
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.includes(lang === 'de' ? 'Deutsch' : 'English'));
-  });
-}
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>
