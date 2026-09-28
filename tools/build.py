@@ -45,12 +45,14 @@ MAIN_NAV = [
 GOOGLE_URL = "https://maps.google.com/?cid=7272441535974230158"
 
 # Auftraggeber: (Logo-Datei oder None, Name, Zusatz)
+# Auftraggeber: (Logo-Datei oder None, Name, Anzeigebreite in px)
+# Breiten gleichen die sichtbare Fläche an (breite Logos breiter, hohe schmaler).
 CLIENTS = [
-    ("img/logos/stadt-zuerich.svg", "Stadt Zürich", "Immobilien und Hallenbad"),
-    ("img/logos/stadt-luzern.svg", "Stadt Luzern", ""),
-    ("img/logos/stadt-thun.svg", "Stadt Thun", ""),
-    (None, "RIMO AG", "Immobilien, Reiden"),
-    ("img/logos/hotel-vitznauerhof.svg", "Hotel Vitznauerhof", ""),
+    ("img/logos/stadt-zuerich.svg", "Stadt Zürich", 195),
+    ("img/logos/stadt-luzern.svg", "Stadt Luzern", 123),
+    ("img/logos/stadt-thun.svg", "Stadt Thun", 131),
+    (None, "RIMO AG", 0),
+    ("img/logos/hotel-vitznauerhof.svg", "Hotel Vitznauerhof", 117),
 ]
 
 GOOGLE_G = ('<svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>'
@@ -61,12 +63,11 @@ GOOGLE_G = ('<svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#
 
 def clients_block():
     tiles = []
-    for logo, name, extra in CLIENTS:
-        small = f"<small>{extra}</small>" if extra else ""
+    for logo, name, width in CLIENTS:
         if logo:
-            tiles.append(f'      <div class="logo-tile"><img src="{logo}" alt="{name}" loading="lazy">{small}</div>')
+            tiles.append(f'      <div class="logo-tile"><img src="{logo}" alt="{name}" style="width:{width}px" loading="lazy"></div>')
         else:
-            tiles.append(f'      <div class="logo-tile"><span class="wordmark">{name}</span>{small}</div>')
+            tiles.append(f'      <div class="logo-tile"><span class="wordmark">{name}</span></div>')
     return ('    <div class="logo-wall">\n' + "\n".join(tiles) + '\n    </div>')
 
 
@@ -201,7 +202,7 @@ def page(name, meta, body):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
-<link rel="stylesheet" href="site.css?v=7">
+<link rel="stylesheet" href="site.css?v=8">
 {extra_head}</head>
 <body>
 
