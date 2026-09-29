@@ -37,7 +37,6 @@ MAIN_NAV = [
     ("behoerden.html", "Öffentliche Hand"),
     ("referenzen.html", "Referenzen"),
     ("firma.html", "Firma"),
-    ("preisliste.html", "Preise"),
     ("jobs.html", "Jobs"),
     ("kontakt.html", "Kontakt"),
 ]
@@ -154,7 +153,6 @@ def footer():
           <li><a href="behoerden.html">Öffentliche Hand</a></li>
           <li><a href="referenzen.html">Referenzen</a></li>
           <li><a href="firma.html">Firma</a></li>
-          <li><a href="preisliste.html">Preisliste</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="{FLYER}" target="_blank" rel="noopener">Firmenflyer (PDF)</a></li>
         </ul>
