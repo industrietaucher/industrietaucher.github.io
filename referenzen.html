@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="site.css?v=8">
+<link rel="stylesheet" href="site.css?v=9">
 </head>
 <body>
 
@@ -161,21 +161,29 @@
   </div>
 </section>
 
-<section class="sec">
+<section class="sec" id="galerie">
   <div class="wrap">
-    <div class="head">
-      <div class="kicker">Bilder</div>
-      <h2>Aus unseren Einsätzen</h2>
+    <div class="head-row">
+      <div class="head">
+        <div class="kicker">Galerie</div>
+        <h2>Aus unseren Einsätzen</h2>
+        <p class="lead">Eigene Aufnahmen aus Einsätzen in Schweizer Seen: Tiefeneinsätze, Wracks, Leitungen, Bergungen.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://maps.google.com/?cid=7272441535974230158" target="_blank" rel="noopener">Alle Bilder auf Google</a>
     </div>
     <div class="gallery">
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-tiefe-62m.jpg" alt="Tauchcomputer zeigt 62 m Tiefe" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-wrack-innenraum.jpg" alt="Blick aus dem Inneren eines Wracks" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-wrack-lampe.jpg" alt="Wrackteil im Lichtkegel der Tauchlampe" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-wrack-rumpf.jpg" alt="Rumpf eines Wracks" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-bergung-ebike.jpg" alt="Geborgenes E-Bike am Seeufer" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-bergung-kaimauer.jpg" alt="Bergung an einer Kaimauer" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-wrack-bewuchs.jpg" alt="Bewachsenes Wrack" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-leine-struktur.jpg" alt="Taucher an einer Unterwasserstruktur" loading="lazy"></button>
       <button type="button" onclick="openLightbox(this)"><img src="img/eigen-seekabel.jpg" alt="Seekabel am Seegrund" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-inspektion-wand.jpg" alt="Inspektion einer Unterwasserwand" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-objekt-seegrund.jpg" alt="Objekt am Seegrund" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-muschelbewuchs.jpg" alt="Muschelbewuchs" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-einstieg-steg.jpg" alt="Abstieg vom Steg" loading="lazy"></button>
       <button type="button" onclick="openLightbox(this)"><img src="img/eigen-rumpf-kamera.jpg" alt="Rumpfinspektion mit Kamera" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-struktur.jpg" alt="Bewachsene Struktur" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-abstieg.jpg" alt="Abstieg in die Tiefe" loading="lazy"></button>
-      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-einstieg.jpg" alt="Einstieg ins Wasser" loading="lazy"></button>
+      <button type="button" onclick="openLightbox(this)"><img src="img/eigen-muschelbewuchs.jpg" alt="Muschelbewuchs an einer Leitung" loading="lazy"></button>
     </div>
   </div>
 </section>
