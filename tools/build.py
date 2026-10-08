@@ -50,6 +50,7 @@ CLIENTS = [
     ("img/logos/stadt-zuerich.svg", "Stadt Zürich", 195),
     ("img/logos/stadt-luzern.svg", "Stadt Luzern", 123),
     ("img/logos/stadt-thun.svg", "Stadt Thun", 131),
+    ("img/logos/holcim.svg", "Holcim Kies und Beton AG", 180),
     (None, "RIMO AG", 0),
     ("img/logos/hotel-vitznauerhof.svg", "Hotel Vitznauerhof", 117),
 ]
@@ -200,7 +201,7 @@ def page(name, meta, body):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
-<link rel="stylesheet" href="site.css?v=9">
+<link rel="stylesheet" href="site.css?v=10">
 {extra_head}</head>
 <body>
 
